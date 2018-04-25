@@ -29,7 +29,7 @@ body {
     bottom: 32px;
     z-index: 1;
 
-    animation: bump 0.8s 10s infinite alternate;
+    animation: bump 0.8s 0.5s infinite alternate;
 }
 
 .car1 {
@@ -42,7 +42,7 @@ body {
     bottom: 7px;
     z-index: 2;
 
-    animation: bump2 0.8s 8.5s infinite alternate;
+    animation: bump2 0.8s 0s infinite alternate;
 }
 
 .road {
@@ -62,7 +62,7 @@ body {
 .clock {
     height: 400px;
     width: 400px;
-    background: url(../images/speedometer.png);
+    background: url(../images/speedometer2.png);
     background-size: cover; 
     position: relative;
     top: 20px;
@@ -94,28 +94,24 @@ body {
     border-color: transparent transparent #ff0000 transparent;
 
     transform:rotate(-95deg);
-    transform-origin:43% 100%;
+    transform-origin: 43% 100%;
     // float: left;
-    animation: accelerate 6s 0s infinite;
+    // animation-delay: 2s;
+    // animation:   greenColor 2s infinite
+   
+}
+.moveCLock {
+    animation: speedClock 6s 0s,
+        greenColor 2s 2s steps(1)
 }
 
-
-.gear1 {
-    animation: move 25s 0s infinite;
-}
-.gear2 {
-    animation: move 10s 0s infinite;
-}
-
-@keyframes move {
-
-   to {
-        left: 500px;
+@keyframes greenColor {
+    100% {
+        border-color: transparent transparent green transparent;
     }
-
 }
 
-@keyframes accelerate {
+@keyframes speedClock {
     0% {
         transform: rotate(-95deg);
     }
@@ -149,3 +145,18 @@ body {
         bottom: 8px;
     }
 }
+
+// .gear1 {
+//     animation: move 25s 0s infinite;
+// }
+// .gear2 {
+//     animation: move 10s 0s infinite;
+// }
+
+// @keyframes move {
+
+//    to {
+//         left: 500px;
+//     }
+
+// }
