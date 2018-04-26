@@ -22,10 +22,13 @@ class Car1 extends React.Component {
                 clearInterval(this.userTimerMove)
                 this.props.gameOver()
                
-            }
-            this.setState ({
+            } else {
+                this.setState ({
                 userMoveLeft: this.state.userMoveLeft + (1+this.state.userActiveGear) //dodanie mnożnika
             })
+            }
+            
+            
         }, 50) 
     }
 
@@ -51,6 +54,11 @@ class Car1 extends React.Component {
         this.userCar()
     }
 
+    componentWillUnmount() {
+        clearInterval(this.timer)
+        clearInterval(this.userTimerMove)
+    }
+
     userGearChange = (event) => {
         if(event.keyCode == 32 && this.state.counterPlayer >= 2 && this.state.counterPlayer <= 100) {
             
@@ -61,7 +69,6 @@ class Car1 extends React.Component {
             this.props.resetIndicator()
         }
         
-
     }
 
     render() {

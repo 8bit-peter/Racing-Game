@@ -11,9 +11,11 @@ class EndScreen extends React.Component {
 
     
     render() {
-        return  <div className="startScreen">
-        <h2>RACE OVER!</h2>
-            
+        return  <div className="gameOver">
+        <div className="endScreenText">
+            <h2>RACE<br/>OVER!</h2>
+            <p>Press F5 to reload</p>
+        </div>
         </div>
     }
 }

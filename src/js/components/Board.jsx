@@ -3,7 +3,8 @@ import {Car1} from './car1.jsx';
 import {CpuCar} from './cpuCar.jsx'; //dodane
 import {Indicator} from './indicator.jsx'; //dodane
 import {StartScreen} from './StartScreen.jsx';
-import {EndScreen} from './EndScreen.jsx'
+import {EndScreen} from './EndScreen.jsx';
+import {Dot} from './dot.jsx';
 
 class Board extends React.Component {
     constructor(props){
@@ -55,7 +56,8 @@ class Board extends React.Component {
                 <div className="road"></div>
                 <div className="clock">
                     <Indicator indiReset={this.state.indicatorReset}/>
-                    <div className="dot"></div>
+                    {/* <div className="dot"></div> */}
+                    <Dot indiReset={this.state.indicatorReset}/>
                 </div>
 
             </div>

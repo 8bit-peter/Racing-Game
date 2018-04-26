@@ -73,6 +73,11 @@ class CpuCar extends React.Component {
 
     }
 
+    componentWillUnmount() {
+        clearInterval(this.timer)
+        clearInterval(this.timerMove)
+    }
+
     render() {
         const cpuCar = {
             left: this.state.moveLeft
