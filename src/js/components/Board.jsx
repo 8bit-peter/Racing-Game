@@ -1,20 +1,24 @@
 import React from "react";
 import {Car1} from './car1.jsx';
-import {CpuCar} from './cpuCar.jsx' //dodane
-import {Indicator} from './indicator.jsx' //dodane
+import {CpuCar} from './cpuCar.jsx'; //dodane
+import {Indicator} from './indicator.jsx'; //dodane
+import {StartScreen} from './StartScreen.jsx';
+import {EndScreen} from './EndScreen.jsx'
 
 class Board extends React.Component {
     constructor(props){
         super(props);
         this.state = {
             indicatorReset: false,
-            showEndGame: false
+            showEndGame: false,
+
+            startGame: true
         }
     }
 
     resetIndicator =() => {
         
-        let clockTimer = setTimeout (() => {
+        this.clockTimer = setTimeout (() => {
             this.setState({
                 indicatorReset: false,
             })
@@ -29,11 +33,19 @@ class Board extends React.Component {
             showEndGame: true
         })
     }
+
+    startGame = () => {
+        this.setState ({
+            startGame: false
+        })
+    }
     
     render() {
         //  console.log(this.state.indicatorReset)
-        if(this.state.showEndGame === true) {
-            return <h1>lalala</h1> // dodany ekran endGame
+        if(this.state.startGame === true) {
+            return <StartScreen startGame={this.startGame}/>
+        } else if (this.state.showEndGame === true) {
+            return <EndScreen />
         } else {
             return <div className="playground" >
 

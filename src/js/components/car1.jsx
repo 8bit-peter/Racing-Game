@@ -52,7 +52,7 @@ class Car1 extends React.Component {
     }
 
     userGearChange = (event) => {
-        if(event.keyCode == 32 && this.state.counterPlayer >= 2 && this.state.counterPlayer <= 6) {
+        if(event.keyCode == 32 && this.state.counterPlayer >= 2 && this.state.counterPlayer <= 100) {
             
             this.setState({
                 userActiveGear: this.state.userActiveGear+1,
