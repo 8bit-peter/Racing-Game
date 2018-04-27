@@ -28,7 +28,6 @@ class Car1 extends React.Component {
             })
             }
             
-            
         }, 50) 
     }
 

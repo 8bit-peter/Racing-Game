@@ -6,6 +6,7 @@ import {StartScreen} from './StartScreen.jsx';
 import {EndScreen} from './EndScreen.jsx';
 import {Dot} from './dot.jsx';
 
+
 class Board extends React.Component {
     constructor(props){
         super(props);
@@ -16,6 +17,7 @@ class Board extends React.Component {
             startGame: true
         }
     }
+
 
     resetIndicator =() => {
         
@@ -40,24 +42,30 @@ class Board extends React.Component {
             startGame: false
         })
     }
+
+    reloadGame = () => {
+        this.setState ({
+            startGame: true,
+            showEndGame: false
+        })
+    }
     
     render() {
-        //  console.log(this.state.indicatorReset)
         if(this.state.startGame === true) {
             return <StartScreen startGame={this.startGame}/>
         } else if (this.state.showEndGame === true) {
-            return <EndScreen />
+            return <EndScreen reloadGame={this.reloadGame}/>
         } else {
             return <div className="playground" >
-
+                
                 <Car1 resetIndicator={this.resetIndicator} gameOver={this.gameOver}/>
                 <CpuCar />
                 <div className="timer"></div>
                 <div className="road"></div>
                 <div className="clock">
                     <Indicator indiReset={this.state.indicatorReset}/>
-                    {/* <div className="dot"></div> */}
                     <Dot indiReset={this.state.indicatorReset}/>
+                    <p>Use spacebar</p>
                 </div>
 
             </div>
@@ -66,5 +74,5 @@ class Board extends React.Component {
     }
 }
 
-
 export {Board}
+

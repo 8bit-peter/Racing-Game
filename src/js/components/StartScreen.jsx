@@ -32,7 +32,7 @@ class StartScreen extends React.Component {
         this.props.startGame()
     }
     
-    render() { //DODANE startGAME na buttonie
+    render() {
         return  <div className="startScreen">
             <div className="startScreenText">
                 <h1>REACT<br/>RACER</h1>
