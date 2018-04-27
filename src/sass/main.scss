@@ -41,7 +41,7 @@ iframe {
     height: 100vh;
     background-color: #000;
     position: relative;
-    background: url(../images/city_background.png);
+    background: url(./images/city_background.png);
     background-repeat: repeat-x;
     background-size: cover;
     overflow: hidden;
@@ -57,7 +57,7 @@ iframe {
     height: 100vh;
     background-color: #000;
     position: relative;
-    background: url(../images/city_background.png);
+    background: url(./images/city_background.png);
     background-repeat: repeat-x;
     background-size: cover;
     overflow: hidden;
@@ -102,7 +102,7 @@ iframe {
         height: 100vh;
         background-color: #000;
         position: relative;
-        background: url(../images/city_background.png);
+        background: url(./images/city_background.png);
         background-repeat: repeat-x;
         background-size: cover;
         overflow: hidden;
@@ -112,7 +112,7 @@ iframe {
 }
 
 .car2 {
-    background: url(../images/cars2.png) no-repeat -731px -357px;
+    background: url(./images/cars2.png) no-repeat -731px -357px;
 	width: 76px;
 	height: 25px;
     zoom: 3;
@@ -127,7 +127,7 @@ iframe {
 .car1 {
     width: 80px;
     height: 28px;
-    background: url(../images/cars2.png) no-repeat -744px -13px;
+    background: url(./images/cars2.png) no-repeat -744px -13px;
     zoom: 3;
     position: absolute;
     left: 20px;
@@ -140,7 +140,7 @@ iframe {
 .road {
     height: 150px;
     width: 100%;
-    background: url(../images/road.png);
+    background: url(./images/road.png);
     background-size: contain; 
     position: absolute;
     bottom: 0;
@@ -154,7 +154,7 @@ iframe {
 .clock {
     height: 400px;
     width: 400px;
-    background: url(../images/speedometer2.png);
+    background: url(./images/speedometer2.png);
     background-size: cover; 
     position: relative;
     top: 20px;
@@ -265,17 +265,3 @@ iframe {
     }
 }
 
-// .gear1 {
-//     animation: move 25s 0s infinite;
-// }
-// .gear2 {
-//     animation: move 10s 0s infinite;
-// }
-
-// @keyframes move {
-
-//    to {
-//         left: 500px;
-//     }
-
-// }
