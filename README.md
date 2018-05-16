@@ -17,3 +17,7 @@ the point of the game is to change gears using spacebar in the fastest possible 
 Game ends when player's car reaches the end of screen. Right now there is no text who won - it will be added later.
 
 ![ScreenShot](/screenshots/game_over_screen.jpg)
+
+# Repository Instalation
+
+Copy webpack and package.json and run "npm i" in command line.
