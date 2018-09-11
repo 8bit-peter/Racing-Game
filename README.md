@@ -2,6 +2,9 @@
 
 Game created with REACT library, webpack and sass.
 
+# LIVE preview: 
+https://8bit-peter.github.io/Racing-Game/
+
 The idea was to create simple but fun 8/16-bit styled game with REACT as a final project after Coders Lab course. The REACT library was the last week of the course.
 
 Title screen reminds the good old games from the past. Just click to start the game.
